@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>意思決定Matrix (Decision Matrix)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>意思決定Matrix</h1>
+        <p>変数を定義し、重みを付け、最適解を算出する。</p>
+    </header>
+
+    <div class="panel">
+        <div class="panel-header">
+            <div class="panel-title">1. 評価基準 (Criteria)</div>
+            <button onclick="addCriterion()" class="primary">+ 基準を追加</button>
+        </div>
+        <div id="criteria-list">
+            </div>
+        <div class="hint">重み（Weight）はデフォルトで1。数値が大きいほど重要視されます。</div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-header">
+            <div class="panel-title">2. 選択肢とスコアリング (Options)</div>
+            <button onclick="addOption()" class="primary">+ 選択肢を追加</button>
+        </div>
+        <div class="matrix-container">
+            <table id="matrix-table">
+                <thead>
+                    <tr id="table-header">
+                        <th>選択肢名</th>
+                        <th class="num">合計スコア</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
